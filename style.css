@@ -56,6 +56,11 @@ html, body {
     top: 20px;
     right: 20px;
 }
+.logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
 
 .bg button, .full button{
     border-radius: 100px;
@@ -79,6 +84,11 @@ html, body {
 .full img{
     width: clamp(20px, 6vw, 30px);
     height: clamp(20px, 6vw, 30px);
+}
+
+.logo img{
+    width: clamp(20px, 9vw, 45px);
+    height: clamp(20px, 9vw, 45px);
 }
 
 .img{

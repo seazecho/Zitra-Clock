@@ -1,23 +1,28 @@
-const time = document.querySelector('.time')
-const weekday = document.querySelector('.weekday')
-const day = document.querySelector('.day')
-const month = document.querySelector('.month')
-const year = document.querySelector('.year')
-const b = document.querySelector('.b')
-const date2 = document.querySelector('.date')
-const weekdays = ["Sunday,", "Monday,", "Tuesday,", "Wednesday,", "Thursday,", "Friday,", "Saturday,"]
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const time = document.querySelector('.time');
+const weekday = document.querySelector('.weekday');
+const day = document.querySelector('.day');
+const month = document.querySelector('.month');
+const year = document.querySelector('.year');
+const b = document.querySelector('.b');
+const date2 = document.querySelector('.date');
+const weekdays = ["Sunday,", "Monday,", "Tuesday,", "Wednesday,", "Thursday,", "Friday,", "Saturday,"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const body = document.querySelector('body');
 let bStatus = 0;
 const bg = document.querySelector('.bg button');
 const full = document.querySelector('.full button');
+const logo = document.querySelector('.logo');
 b.addEventListener('click', () => {
     bStatus = bStatus === 0 ? 1 : 0;
+})
+logo.addEventListener('click', () => {
+    location.reload();
 })
 
 function applyTheme() {
     if(isDark)
     {
+        logo.innerHTML = '<img src="./images/favicon.png">'
         bg.innerHTML = '<img src="./images/fog-lamp-on.png" class="img">';
         full.innerHTML = '<img src="./images/full.png" class="img-2">';
         body.style.backgroundColor = '#222222';
@@ -29,6 +34,7 @@ function applyTheme() {
     }
     else
     {   
+        logo.innerHTML = '<img src="./images/favicon.png">'
         bg.innerHTML = '<img src="./images/fog-lamp.png" class="img" alt=""> ';
         full.innerHTML = '<img src="./images/full.png" alt="">';
         body.style.backgroundColor = '#F5E7C6';
